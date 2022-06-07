@@ -1,19 +1,21 @@
 const express = require("express");
 const handlebars = require('express-handlebars');
-
+const routes = require('./routes');
 const app = express();
 
-app.use('/static', express.static('public'));
 
-app.engine('hbs', handlebars.engine({
-  extname: 'hbs'
-}));
+app.use("/static", express.static("public"));
 
-app.set('view engine', 'hbs');
-app.set('views', './src/views');
+app.engine(
+  "hbs",
+  handlebars.engine({
+    extname: "hbs",
+  })
+);
 
-app.get("/", (req, res) => {
-  res.render('index');
-});
+app.set("view engine", "hbs");
+app.set("views", "./src/views");
+
+app.use(routes);
 
 app.listen(5000, () => console.log("App is listening on port 5000..."));
