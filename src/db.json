@@ -1,40 +1,47 @@
 [
-    {
-        "name": "Gan356 Air SM",
-        "imageUrl": "https://ae01.alicdn.com/kf/HTB1CSddXRxRMKJjy0Fdq6yifFXa6/Gan-356-Air-SM-3x3-Black-Magic-cube-GAN-Air-SM-Magnetic-3x3x3-Speed-cube-gans.jpg",
-        "difficultyLevel": 3
-    },
-    {
-        "name": "Eco-Dark",
-        "imageUrl": "https://thingsidesire.com/wp-content/uploads/2018/06/Eco-Dark-Rubik%E2%80%99s-Cube2.jpg",
-        "difficultyLevel": 6
-    },
-    {
-        "name": "Pyraminx",
-        "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/61izOzq%2BBAL._SY355_.jpg",
-        "difficultyLevel": 1
-    },
-    {
-        "name": "Megaminx",
-        "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/61HpQqVQ37L._SY355_.jpg",
-        "difficultyLevel": 3
-    },
-    {
-        "name": "Classic cubic",
-        "description": "Classic cubic",
-        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-sNGlXGfEerbW8D09xP6155A0fo4QD7MKZg&usqp=CAU",
-        "difficultyLevel": "2"
-    },
-    {
-        "name": "Highly Complex Professional Cube 5x5 ",
-        "description": "Highly Complex Professional Cube 5x5 ",
-        "imageUrl": "https://cdn.shopify.com/s/files/1/0274/0797/4503/products/rubik-cube-5x5-solved_grande.jpg?v=1574232727",
-        "difficultyLevel": "5"
-    },
-    {
-        "name": "White cubic",
-        "description": "White cubic",
-        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5YxxJBXzSliiPNVmkwmXb8c1x-LA6vI29EKBCLaJ6KMktzhgJkfGVrK-FvESkQ7T05Rk&usqp=CAU",
-        "difficultyLevel": "1"
-    }
+  {
+    "id": 0,
+    "name": "Gan356 Air SM",
+    "imageUrl": "https://ae01.alicdn.com/kf/HTB1CSddXRxRMKJjy0Fdq6yifFXa6/Gan-356-Air-SM-3x3-Black-Magic-cube-GAN-Air-SM-Magnetic-3x3x3-Speed-cube-gans.jpg",
+    "difficultyLevel": 3
+  },
+  {
+    "id": 1,
+    "name": "Eco-Dark",
+    "imageUrl": "https://thingsidesire.com/wp-content/uploads/2018/06/Eco-Dark-Rubik%E2%80%99s-Cube2.jpg",
+    "difficultyLevel": 6
+  },
+  {
+    "id": 2,
+    "name": "Pyraminx",
+    "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/61izOzq%2BBAL._SY355_.jpg",
+    "difficultyLevel": 1
+  },
+  {
+    "id": 3,
+    "name": "Megaminx",
+    "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/61HpQqVQ37L._SY355_.jpg",
+    "difficultyLevel": 3
+  },
+  {
+    "id": 4,
+    "name": "Classic cubic",
+    "description": "Classic cubic",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-sNGlXGfEerbW8D09xP6155A0fo4QD7MKZg&usqp=CAU",
+    "difficultyLevel": "2"
+  },
+  {
+    "id": 5,
+    "name": "Highly Complex Professional Cube",
+    "description": "Highly Complex Professional Cube 5x5 ",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0274/0797/4503/products/rubik-cube-5x5-solved_grande.jpg?v=1574232727",
+    "difficultyLevel": "5"
+  },
+  {
+    "id": 6,
+    "name": "White cubic",
+    "description": "White cubic",
+    "imageUrl": "https://media.istockphoto.com/photos/rubiks-cube-picture-id458229145?k=20&m=458229145&s=612x612&w=0&h=iUH9CpaIZmYdPM5U1NxTbt8M8t1uRBTDG4zmEJnIj8s=",
+    "difficultyLevel": "1"
+  }
 ]
