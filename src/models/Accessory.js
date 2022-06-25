@@ -12,11 +12,11 @@ const accessorySchema = new mongoose.Schema({
       validator: /^http?/g,
       message: "Image url should be a link",
     },
-    description: {
-      type: String,
-      maxlength: 120,
-      required: true,
-    },
+  },
+  description: {
+    type: String,
+    maxlength: 120,
+    required: true,
   },
 });
 
