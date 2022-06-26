@@ -5,10 +5,18 @@ const Accessory = require("../models/Accessory");
 const Cube = require("../models/Cube");
 
 exports.getAll = async (search = "", fromInput, toInput) => {
-  let cubes = await Cube.find().lean();
+  const from = Number(fromInput) || 0;
+  const to = Number(toInput) || 6;
 
-  // const from = Number(fromInput) || 0;
-  // const to = Number(toInput) || 6;
+  // let cubes = await Cube.find(
+  //   { name: { $regex: new RegExp(search, "i") },
+  //   difficultyLevel: { $and: [{ $gte: from }, { $lte: to }] }
+  //  },
+  // ).lean();
+
+  let cubes = await Cube.find({name: { $regex: new RegExp(search, 'i')}})
+  .where('difficultyLevel').lte(to).gte(from)
+  .lean();
 
   // const result = cubes
   // .filter(x => x.name.toLowerCase().includes(search.toLowerCase()))
@@ -17,9 +25,10 @@ exports.getAll = async (search = "", fromInput, toInput) => {
   return cubes;
 };
 
-exports.getOne =  (cubeId) =>  Cube.findById(cubeId);
+exports.getOne = (cubeId) => Cube.findById(cubeId);
 
-exports.getOneDetails =  (cubeId) =>  Cube.findById(cubeId).populate("accessories");
+exports.getOneDetails = (cubeId) =>
+  Cube.findById(cubeId).populate("accessories");
 
 exports.create = (cube) => {
   return Cube.create(cube);
