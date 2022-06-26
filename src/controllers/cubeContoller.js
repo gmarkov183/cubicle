@@ -1,3 +1,4 @@
+const { route } = require("express/lib/application");
 const req = require("express/lib/request");
 const cubeService = require('../services/cubeService')
 
@@ -32,6 +33,10 @@ router.get('/details/:id', async (req, res) => {
     const cube = await cubeService.getOne(req.params.id).lean();
 
     res.render('details', { cube });
+});
+
+router.get('/:cubeId/attach-accessory', (req, res) => {
+res.render('accessory/attach');
 });
 
 module.exports = router;
