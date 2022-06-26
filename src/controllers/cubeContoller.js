@@ -1,10 +1,8 @@
 const { route } = require("express/lib/application");
 const req = require("express/lib/request");
-const cubeService = require('../services/cubeService')
+const cubeService = require("../services/cubeService");
 
 const router = require("express").Router();
-
-
 
 router.get("/create", (req, res) => {
   res.render("create");
@@ -18,25 +16,26 @@ router.post("/create", (req, res) => {
     return res.status(400).send("Invalid request");
   }
   //Save data
-  cubeService.create(cube)
-  .then(() => {
-//Redirect to page
-    res.redirect('/');
-  })
-  .catch(err => {
+  cubeService
+    .create(cube)
+    .then(() => {
+      //Redirect to page
+      res.redirect("/");
+    })
+    .catch((err) => {
       res.status(400).send(err);
-  })
-  
+    });
 });
 
-router.get('/details/:id', async (req, res) => {
-    const cube = await cubeService.getOne(req.params.id).lean();
+router.get("/details/:id", async (req, res) => {
+  const cube = await cubeService.getOne(req.params.id).lean();
 
-    res.render('details', { cube });
+  res.render("details", { cube });
 });
 
-router.get('/:cubeId/attach-accessory', (req, res) => {
-res.render('accessory/attach');
+router.get("/:cubeId/attach-accessory", async (req, res) => {
+  const cube = await cubeService.getOne(req.params.cubeId).lean();
+  res.render("accessory/attach", { cube });
 });
 
 module.exports = router;
